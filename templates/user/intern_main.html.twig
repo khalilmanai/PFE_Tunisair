@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is the interns homepage</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td>{{ user.getUsername() }}</td>
+          <td>{{ user.getId() }}</td>
+          <td>{{ user.getEmail() }}</td>
+          <td>{{ user.getRole() }}</td>
+          <td>{{ user.getPhone() }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

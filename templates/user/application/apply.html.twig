@@ -1,0 +1,13 @@
+{# templates/application/apply.html.twig #} {% extends 'base.html.twig' %} {%
+block title %}Apply{% endblock %} {% block body %}
+<h1>Apply for a Position</h1>
+
+{{ form_start(form) }}
+{{ form_row(form.cvFile) }}
+{{ form_row(form.etablissement) }}
+{{ form_row(form.diplome) }}
+{{ form_row(form.motivationLetter) }}
+
+<button type="submit" class="btn btn-primary">Submit</button>
+{{ form_end(form) }}
+{% endblock %}
